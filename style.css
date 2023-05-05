@@ -1,0 +1,41 @@
+.body {
+  background-color: papayawhip;
+}
+.container {
+  text-align: center;
+}
+.input-box {
+  width: 34%;
+  height: 30px;
+  font-size: 28px;
+  color: #202124;
+  font-weight: normal;
+  text-align: right;
+}
+.btn {
+  height: 27px;
+  width: 125px;
+  margin: 2px;
+  cursor: pointer;
+  line-height: 26px;
+  text-align: center;
+  font-size: 14px;
+  outline: 0;
+}
+.btn-digit {
+  background: #f1f3f4;
+  cursor: pointer;
+  color: #202124;
+  border: 1px solid #f1f3f4;
+  border-radius: 4px;
+}
+.btn-operator {
+  color: color;
+  border: 1px solid #dadce0;
+  background: #dadce0;
+}
+.btn-equal {
+  background: #4285f4;
+  border: 1px solid #4285f4;
+  color: #fff;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <input class="input-box" type="text" />
+      </div>
+      <div>
+        <button class="btn btn-operator">(</button>
+        <button class="btn btn-operator">)</button>
+        <button class="btn btn-operator">%</button>
+        <button class="btn btn-operator clear">Clear</button>
+      </div>
+      <div>
+        <button class="btn btn-digit">7</button>
+        <button class="btn btn-digit">8</button>
+        <button class="btn btn-digit">9</button>
+        <button class="btn btn-operator">*</button>
+      </div>
+      <div>
+        <button class="btn btn-digit">4</button>
+        <button class="btn btn-digit">5</button>
+        <button class="btn btn-digit">6</button>
+        <button class="btn btn-operator">/</button>
+      </div>
+      <div>
+        <button class="btn btn-digit">1</button>
+        <button class="btn btn-digit">2</button>
+        <button class="btn btn-digit">3</button>
+        <button class="btn btn-operator">-</button>
+      </div>
+      <div>
+        <button class="btn btn-digit">0</button>
+        <button class="btn btn-digit">.</button>
+        <button class="btn btn-equal">=</button>
+        <button class="btn btn-operator">+</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const digits = document.querySelectorAll(".btn-digit");
+    const inputBox = document.querySelector(".input-box");
+
+    digits.forEach((digit) => {
+      digit.addEventListener("click", () => {
+        inputBox.value += digit.textContent;
+      });
+    });
+
+    const operator = document.querySelectorAll(".btn-operator");
+
+    operator.forEach((action) => {
+      action.addEventListener("click", () => {
+        inputBox.value += action.textContent;
+      });
+    });
+
+    const result = document.querySelector(".btn-equal");
+
+    result.addEventListener("click", () => {
+      inputBox.value = eval(inputBox.value);
+    });
+
+    const clear = document.querySelector(".clear");
+    clear.addEventListener("click", () => {
+      inputBox.value = "";
+    });
+  </script>
+</html>
